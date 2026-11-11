@@ -1,0 +1,41 @@
+services:
+  # Data Pipeline ETL & Training Runner (Runs once to build DW & ML model)
+  etl_pipeline:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: churn_etl_runner
+    command: python scripts/run_pipeline.py
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+
+  # FastAPI Model Inference Service (Port 8000)
+  fastapi_app:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: churn_fastapi_service
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+    depends_on:
+      - etl_pipeline
+
+  # Streamlit Interactive Dashboard (Port 8501)
+  streamlit_dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.dashboard
+    container_name: churn_streamlit_dashboard
+    restart: unless-stopped
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+    depends_on:
+      - fastapi_app

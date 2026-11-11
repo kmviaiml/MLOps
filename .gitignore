@@ -1,0 +1,124 @@
+# ==============================================================================
+# Byte-compiled / optimized / Python runtime
+# ==============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ==============================================================================
+# Virtual Environments
+# ==============================================================================
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ==============================================================================
+# Large Datasets & Generated Data Files
+# ==============================================================================
+# Raw and temporary datasets (keep directories via .gitkeep)
+*.csv
+*.xlsx
+*.parquet
+*.feather
+*.zip
+*.tar.gz
+
+# Data Warehouse databases
+*.db
+*.sqlite
+*.sqlite3
+data/warehouse/*.db
+data/warehouse/*.sqlite
+data/warehouse/*.sqlite3
+
+# Logs & Audit trails
+*.log
+logs/
+data/logs/*.log
+etl_*.log
+
+# ==============================================================================
+# Machine Learning & MLOps Artifacts
+# ==============================================================================
+# MLflow tracking directory
+mlruns/
+mlartifacts/
+.mlflow/
+
+# Trained model binaries (large serialized models)
+models/*.joblib
+models/*.pkl
+models/*.h5
+models/*.onnx
+models/*.pt
+models/*.pth
+# Preserve directory structure in empty folders
+!.gitkeep
+
+# ==============================================================================
+# Testing & Coverage
+# ==============================================================================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# ==============================================================================
+# IDEs & Text Editors
+# ==============================================================================
+.vscode/
+!.vscode/settings.json.example
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# ==============================================================================
+# Streamlit & Dashboard Cache
+# ==============================================================================
+.streamlit/secrets.toml
+.streamlit/*.pyc
+
+# ==============================================================================
+# Operating System Files
+# ==============================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini

@@ -1,0 +1,57 @@
+{
+  "best_model_name": "LogisticRegression",
+  "best_f1_score": 0.3333,
+  "all_metrics": {
+    "LogisticRegression": {
+      "accuracy": 0.75,
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1_score": 0.3333,
+      "roc_auc": 0.4375
+    },
+    "RandomForest": {
+      "accuracy": 0.75,
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1_score": 0.3333,
+      "roc_auc": 0.7083
+    },
+    "XGBoost": {
+      "accuracy": 0.5625,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "roc_auc": 0.4167
+    }
+  },
+  "feature_names": [
+    "recency_days",
+    "frequency_orders",
+    "monetary_value",
+    "avg_order_value",
+    "total_items_bought",
+    "cancellation_count",
+    "tenure_months",
+    "age",
+    "support_tickets",
+    "gender_Female",
+    "gender_Male",
+    "gender_Unknown",
+    "city_Berlin",
+    "city_London",
+    "city_Lyon",
+    "city_Madrid",
+    "city_Manchester",
+    "city_Paris",
+    "subscription_type_Basic",
+    "subscription_type_Gold",
+    "subscription_type_Platinum",
+    "subscription_type_Silver",
+    "rfm_segment_About To Sleep",
+    "rfm_segment_At Risk",
+    "rfm_segment_Champions",
+    "rfm_segment_Loyal Customers",
+    "rfm_segment_Potential Loyalists"
+  ],
+  "trained_at": "2026-11-11 22:00:04"
+}
